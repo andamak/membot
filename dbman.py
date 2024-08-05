@@ -269,7 +269,7 @@ def init_db_defa():
     cursor.execute('delete from content_list')
     contents = [['Сериал','Serial'], ['Фильм','Film'], ['Книга','Book'], ['Комикс','Comics']]
     for content in contents:
-        cursor.execute('''INSERT INTO status_list (status_name_ru, status_name_en) 
+        cursor.execute('''INSERT INTO content_list (content_name_ru, content_name_en) 
                        VALUES (?,?)''', (content[0], content[1]))
         connection.commit()
     
